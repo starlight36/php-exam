@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>首页</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">文章管理</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="__URL__/index">首页</a></li>
+                    <li><a href="__URL__/api">API</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav><!-- nav -->
+    <div class="list container">
+        <volist id="article" name="allArticle">
+                <div class="panel panel-default">
+                <div class="panel-heading">id : {$article.id} , title : {$article.title}</div>
+                <div class="panel-body">
+                    digest : {$article.digest} <br />
+                    content : {$article.content} <br />
+                    status : {$article.status}
+                </div>
+                </div>
+        </volist>
+    </div>
+</body>
+
+</html>
